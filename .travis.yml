@@ -1,5 +1,8 @@
 language: go
 
+os: linux
+arch: s390x
+
 # Whenever the Go version is updated here, .circleci/config.yml and .promu.yml
 # should also be updated.
 go:
