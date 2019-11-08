@@ -28,7 +28,6 @@ script:
 #install yarn
 - wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-s390x.tar.gz
 - tar xzf node-v8.9.4-linux-s390x.tar.gz
-- mv node-v8.9.4-linux-s390x/bin/* /usr/bin
 - npm install -g yarn@1.2.1
 #
 - make check_license style unused test lint
