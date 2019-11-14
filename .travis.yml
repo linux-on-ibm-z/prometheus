@@ -26,5 +26,6 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install make; fi
 
 script:
+- if [ "$HOSTTYPE" == "s390x" ]; then wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-s390x.tar.gz && tar xzf node-v8.9.4-linux-s390x.tar.gz && npm install -g yarn@1.2.1 ; fi
 - make check_license style unused test lint
 - git diff --exit-code
